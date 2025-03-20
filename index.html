@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每月抽獎活動 - 留言按讚分享，贏取豐富獎品</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">幸運抽獎</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sponsors.html">贊助廠商</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lottery.html">抽獎頁面</a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">API狀態: <span id="api-status">檢查中...</span></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold text-white">每月抽獎活動</h1>
+                <p class="lead text-white">留言、按讚、分享，即可參加抽獎贏取豐富獎品</p>
+                <a href="lottery.html" class="btn btn-primary btn-lg">立即參加</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="countdown-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="section-title">本月抽獎倒數</h2>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="countdown-days">00</div>
+                            <div class="countdown-label">天</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="countdown-hours">00</div>
+                            <div class="countdown-label">時</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="countdown-minutes">00</div>
+                            <div class="countdown-label">分</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-value" id="countdown-seconds">00</div>
+                            <div class="countdown-label">秒</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to-participate py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">如何參加抽獎</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 participation-card">
+                        <div class="card-body text-center">
+                            <div class="step-number">1</div>
+                            <h3 class="card-title">留言</h3>
+                            <p class="card-text">在抽獎頁面留下您的想法和評論，分享您對獎品的期待。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 participation-card">
+                        <div class="card-body text-center">
+                            <div class="step-number">2</div>
+                            <h3 class="card-title">按讚</h3>
+                            <p class="card-text">為抽獎活動按讚，表達您對活動的支持和喜愛。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 participation-card">
+                        <div class="card-body text-center">
+                            <div class="step-number">3</div>
+                            <h3 class="card-title">分享</h3>
+                            <p class="card-text">將抽獎活動分享給您的朋友，讓更多人有機會參與。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="participation-note">完成以上三個步驟即可參加本月抽獎，中獎名單將在每月月底公布。</p>
+                <a href="lottery.html" class="btn btn-primary">立即參加</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-prizes py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">精選獎品</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card prize-card h-100">
+                        <img src="https://via.placeholder.com/400x250?text=高級耳機" class="card-img-top" alt="高級無線降噪耳機">
+                        <div class="card-body">
+                            <h3 class="card-title">高級無線降噪耳機</h3>
+                            <p class="card-text">頂級音質，主動降噪技術，長達30小時的電池續航力。</p>
+                            <p class="prize-value">價值: NT$5,000</p>
+                            <p class="sponsor-name">贊助商: 音樂世界</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card prize-card h-100">
+                        <img src="https://via.placeholder.com/400x250?text=智能手錶" class="card-img-top" alt="最新款智能手錶">
+                        <div class="card-body">
+                            <h3 class="card-title">最新款智能手錶</h3>
+                            <p class="card-text">全天候健康監測，GPS定位，防水設計，支援多種運動模式。</p>
+                            <p class="prize-value">價值: NT$8,000</p>
+                            <p class="sponsor-name">贊助商: 科技前線</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card prize-card h-100">
+                        <img src="https://via.placeholder.com/400x250?text=豪華住宿" class="card-img-top" alt="五星級飯店雙人住宿券">
+                        <div class="card-body">
+                            <h3 class="card-title">五星級飯店雙人住宿券</h3>
+                            <p class="card-text">含早餐及SPA體驗，可在全台多家五星級飯店使用。</p>
+                            <p class="prize-value">價值: NT$12,000</p>
+                            <p class="sponsor-name">贊助商: 樂遊旅行</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="sponsors.html" class="btn btn-outline-primary">查看所有獎品</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">得獎者心得</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-content">
+                                <p>"從沒想過我會中獎！收到高級耳機的那一刻真的太開心了，音質超棒！"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h5>陳小明</h5>
+                                <p>2025年2月得獎者</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-content">
+                                <p>"智能手錶的功能超齊全，每天都在使用健康監測功能，幫助我養成運動習慣！"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h5>王大華</h5>
+                                <p>2024年12月得獎者</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-content">
+                                <p>"五星級飯店的住宿體驗太棒了！服務一流，SPA讓人完全放鬆，感謝這個平台！"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <h5>林美玲</h5>
+                                <p>2025年1月得獎者</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-interaction py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">參與討論</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card comment-card">
+                        <div class="card-body">
+                            <h3 class="card-title">留下您的評論</h3>
+                            <form id="comment-form">
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="comment-text" rows="3" placeholder="分享您對本次抽獎活動的想法..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">發表評論</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="comments-list mt-4">
+                        <div class="card comment-item mb-3">
+                            <div class="card-body">
+                                <div class="comment-header d-flex justify-content-between">
+                                    <h5 class="comment-author">張小芳</h5>
+                                    <span class="comment-date">2025/03/18</span>
+                                </div>
+                                <p class="comment-content">上個月參加了抽獎活動，雖然沒中獎，但整個過程很有趣！這個月繼續支持！</p>
+                                <div class="comment-actions">
+                                    <button class="btn btn-sm btn-outline-primary social-btn">讚 (4)</button>
+                                    <button class="btn btn-sm btn-outline-secondary social-btn">回覆</button>
+                                    <button class="btn btn-sm btn-outline-success social-btn">分享</button>
+                                </div>
+                                <div class="comment-replies mt-3">
+                                    <div class="card reply-item">
+                                        <div class="card-body">
+                                            <div class="reply-header d-flex justify-content-between">
+                                                <h6 class="reply-author">陳小明</h6>
+                                                <span class="reply-date">2025/03/18</span>
+                                            </div>
+                                            <p class="reply-content">我也是！希望這次能中獎！</p>
+                                            <div class="reply-actions">
+                                                <button class="btn btn-sm btn-outline-primary social-btn">讚 (2)</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card comment-item mb-3">
+                            <div class="card-body">
+                                <div class="comment-header d-flex justify-content-between">
+                                    <h5 class="comment-author">李志明</h5>
+                                    <span class="comment-date">2025/03/17</span>
+                                </div>
+                                <p class="comment-content">哈希值抽獎真的很公平，可以自己驗證結果，希望這次能中到那個智能手錶！</p>
+                                <div class="comment-actions">
+                                    <button class="btn btn-sm btn-outline-primary social-btn">讚 (3)</button>
+                                    <button class="btn btn-sm btn-outline-secondary social-btn">回覆</button>
+                                    <button class="btn btn-sm btn-outline-success social-btn">分享</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>幸運抽獎</h4>
+                    <p>每月舉辦抽獎活動，留言、按讚、分享即可參加，贏取豐富獎品。</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>快速連結</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="sponsors.html">贊助廠商</a></li>
+                        <li><a href="lottery.html">抽獎頁面</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>聯絡我們</h5>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@luckydraw.com">info@luckydraw.com</a></li>
+                        <li><a href="tel:+886212345678">02-1234-5678</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">© 2025 幸運抽獎. 保留所有權利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api-client.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
